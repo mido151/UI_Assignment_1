@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Campus Events Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="site-logo" href="index.html">Campus<span>Events</span></a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="event-details.html">Event Details</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="registration.html" aria-current="page">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container registration-page">
+        <section class="page-intro">
+            <p class="eyebrow">SAVE YOUR PLACE</p>
+            <h1>Event <span>Registration</span></h1>
+            <p>
+                Register for TechFest 2026 and join a day of technology,
+                artificial intelligence, creativity, and innovation.
+            </p>
+        </section>
+
+        <div class="registration-layout">
+
+            <aside class="registration-summary">
+                <p class="eyebrow">FEATURED EVENT</p>
+                <h2>TechFest 2026</h2>
+                <p>Explore ideas, meet student innovators, and discover
+                   the technology shaping tomorrow.</p>
+
+                <ul class="entry-list">
+                    <li><strong>Date:</strong> 20 November 2026</li>
+                    <li><strong>Time:</strong> 10:00 AM – 4:00 PM</li>
+                    <li><strong>Venue:</strong> Innovation Hall</li>
+                </ul>
+
+                <a class="text-link" href="event-details.html">
+                    View event details →
+                </a>
+            </aside>
+
+            <section class="registration-form-section">
+                <h2>Attendee Information</h2>
+                <p class="form-intro">
+                    Complete the form below. Fields marked with * are required.
+                </p>
+
+                <form class="site-form registration-form"
+                      action="#"
+                      method="get"
+                      enctype="multipart/form-data">
+
+                    <div class="form-field">
+                        <label for="full-name">Full name *</label>
+                        <input
+                            type="text"
+                            id="full-name"
+                            name="full-name"
+                            placeholder="Enter your full name"
+                            pattern="[A-Za-zÀ-ÿ '-]{2,60}"
+                            maxlength="60"
+                            autocomplete="name"
+                            required>
+                        <small class="form-hint">
+                            Use 2–60 characters: letters, spaces, apostrophes, or hyphens.
+                        </small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email address *</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            maxlength="100"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone">Phone number</label>
+                        <input
+                            type="text"
+                            id="phone"
+                            name="phone"
+                            placeholder="+20 100 000 0000"
+                            pattern="[0-9+() -]{7,20}"
+                            maxlength="20"
+                            autocomplete="tel">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="portfolio">Portfolio or profile URL</label>
+                        <input
+                            type="url"
+                            id="portfolio"
+                            name="portfolio"
+                            placeholder="https://example.com"
+                            maxlength="200">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="age">Age *</label>
+                        <input
+                            type="number"
+                            id="age"
+                            name="age"
+                            min="16"
+                            max="100"
+                            required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="interest">How interested are you in technology? (1–10)</label>
+                        <input
+                            type="range"
+                            id="interest"
+                            name="interest"
+                            min="1"
+                            max="10"
+                            value="5">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="event-date">Event date *</label>
+                        <input
+                            type="date"
+                            id="event-date"
+                            name="event-date"
+                            value="2026-11-20"
+                            required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="arrival-time">Preferred arrival time *</label>
+                        <input
+                            type="time"
+                            id="arrival-time"
+                            name="arrival-time"
+                            min="10:00"
+                            max="16:00"
+                            required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="theme-color">Choose your favorite accent color</label>
+                        <input
+                            type="color"
+                            id="theme-color"
+                            name="theme-color"
+                            value="#3B82F6">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="ticket-type">Registration type *</label>
+                        <select id="ticket-type" name="ticket-type" required>
+                            <option value="">Select an option</option>
+                            <option value="student">Student</option>
+                            <option value="guest">Guest</option>
+                            <option value="presenter">Project presenter</option>
+                            <option value="volunteer">Volunteer</option>
+                        </select>
+                    </div>
+
+                    <fieldset class="choice-group">
+                        <legend>Which topic interests you most? *</legend>
+
+                        <label class="choice-row">
+                            <input type="radio" name="topic" value="ai" required>
+                            Artificial Intelligence
+                        </label>
+
+                        <label class="choice-row">
+                            <input type="radio" name="topic" value="robotics">
+                            Robotics
+                        </label>
+
+                        <label class="choice-row">
+                            <input type="radio" name="topic" value="design">
+                            Digital Design
+                        </label>
+
+                        <label class="choice-row">
+                            <input type="radio" name="topic" value="innovation">
+                            Student Innovation
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="choice-group">
+                        <legend>Additional options</legend>
+
+                        <label class="choice-row">
+                            <input type="checkbox" name="updates" value="yes">
+                            Send me updates about future campus events.
+                        </label>
+
+                        <label class="choice-row">
+                            <input type="checkbox" name="accessibility" value="yes">
+                            I would like the team to contact me about accessibility needs.
+                        </label>
+                    </fieldset>
+
+                    <div class="form-field">
+                        <label for="project-file">Upload a project file (optional)</label>
+                        <input
+                            type="file"
+                            id="project-file"
+                            name="project-file"
+                            accept=".pdf,.png,.jpg,.jpeg">
+                        <small class="form-hint">
+                            Accepted file types: PDF, PNG, JPG, or JPEG.
+                        </small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="message">Comments or questions</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            maxlength="500"
+                            placeholder="Tell us what you are looking forward to..."></textarea>
+                        <small class="form-hint">Maximum 500 characters.</small>
+                    </div>
+
+                    <label class="choice-row">
+                        <input type="checkbox" name="confirmation" value="confirmed" required>
+                        I confirm that my registration information is correct. *
+                    </label>
+
+                    <div class="form-actions">
+                        <button class="button button-primary" type="submit">
+                            Submit Registration
+                        </button>
+                        <button class="button button-secondary" type="reset">
+                            Clear Form
+                        </button>
+                    </div>
+
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>© 2026 Campus Events Guide. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/">Instagram</a>
+                <a href="https://www.linkedin.com/">LinkedIn</a>
+                <a href="https://www.youtube.com/">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
